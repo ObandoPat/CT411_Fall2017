@@ -67,6 +67,7 @@ function Bloon() {
             noLoop();
             fill(255);
             textSize(40);
+            areReady = "Come on champ! You got this!";
             text("Click here to try again", width / 3, height - 100, 400, 800);
 
         }
