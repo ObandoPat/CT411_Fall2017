@@ -13,13 +13,13 @@ function draw() {
     background(250, 190, 175);
     throwBalls();
     gameStart();
-    delBalls();
+//    delBalls();
 }
 
 
 function mousePressed() {
     //        textSize(100);
-    areReady = "Move to dodge the incoming balls";
+    areReady = "Move the mouse to dodge the balls";
     rethrow();
     score = score + 1;
 }
@@ -38,8 +38,8 @@ function mousePressed() {
 function Bloon() {
 
     // variables
-    this.x = random(0, width),
-        this.y = random(0, 100),
+        this.x = random(0, width),
+        this.y = random(-6000, 0),
         this.speed = 10,
         this.circDiameter = 50,
         this.circRadius = this.circDiameter / 2,
@@ -118,7 +118,7 @@ function throwBalls() {
 };
 
 function rethrow() {
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < 400; i++) {
         bloons[i] = new Bloon();
     }
     loop();
@@ -130,11 +130,11 @@ function delBalls() {
     }
 }
 
-function dodgeWin() {
-    if (bloons[i] = 0) {
-        areReady = "you won!";
-    }
-}
+//function dodgeWin() {
+//    if (bloons[i] = 0) {
+//        areReady = "you won!";
+//    }
+//}
 
 
 var areReady = "Are you ready? Click to start";
